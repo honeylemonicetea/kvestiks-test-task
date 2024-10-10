@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --orange: #f77833;
+  --dark-gray: #424242;
+  --gray: #383838;
+  --light-gray: #5E5E5E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark-gray);
+}
+
+html {
+  font-size: 14px;
+}
+body {
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.14rem;
+}
+.container {
+  max-width: 1116px;
+}
+.card{
+    box-shadow: 0px 1px 4px #00000014;
+}
+
+/* МЕНЮ */
+
+.nav-desktop {
+  display: block;
+  background-color: #ffffff;
+  padding: 8px 0;
+}
+.nav-desktop__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-mobile {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  color: var(--gray);
+}
+.nav-link i {
+  font-size: 24px;
+}
+
+/* Breadcrumb */
+.breadcrumb-container{
+    margin: 24px 0 32px;
+}
+.breadcrumb{
+    margin: 0;
+}
+.breadcrumb a, .breadcrumb-item.active{
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+
+
+
+.main-article {
+  display: flex;
+  gap: 24px;
+}
+
+/* СТРЕЛЫ АМУРА */
+.cupid {
+  background: linear-gradient(to right, #ffffff 40%, #ffffff00),
+    url(./img/cupid.png) right/61% 100% no-repeat;
+  position: relative;
+}
+.cupid-section {
+    max-width: 74%;
+}
+
+.card-inner {
+    padding: 32px 24px;
+}
+
+.popular-label {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 10px;
+  background-color: #ffffffcc;
+  padding: 4px 11px;
+  border-radius: 3px;
+  line-height: 10px;
+  color: var(--gray);
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 25px;
+    margin-bottom: 18px;
+    width: 49%;
+}
+.tags a{
+    padding: 6px 12px;
+    background-color: #1c1c1c0d;
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+
+.description{
+    width: 33.5%;
+    font-size: 1.14rem;
+}
+
+
+/* ОТЗЫВЫ КЛИЕНТОВ */
+.reviews-heading{
+  display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.reviews-heading_mobile{
+  display: none;
+}
+
+.reviews-heading span{
+    font-size: 1rem;
+    vertical-align: super;
+    font-weight: 400;
+}
+
+.reviews-cards { 
+    display: flex;
+    overflow-x: auto;
+    gap: 24px;
+    padding-bottom: 16px;
+}
+
+.reviews-cards .card{
+    flex-shrink: 0;
+    padding: 30px 24px 16px;
+   
+}
+
+.reviews-cards .card-subtitle{
+    font-size: 13px;
+    color: #868686;
+}
+
+.reviews-cards .card-title{
+    font-size: 1rem;
+    color: var(--gray);
+    margin: 16px 0 6px;
+    font-weight: 600;
+}
+
+.reviews-cards .review-title{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.reviews-cards .card-text{
+    color: var(--light-gray);
+}
+
+.reviews-button{
+    background-color: var(--orange);
+    width: 52%;
+    display: block;
+    margin: 24px auto;
+    border-color: var(--orange);
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 16px 0;
+    border-radius: 8px;
+
+}
+.reviews-button:hover{
+    background-color: var(--orange);
+}
+
+
+/* ПРИНИМАЕМ К ОПЛАТЕ */
+ 
+
+.payment .card-body{
+    text-align: center;
+    padding: 20px 21px;
+}
+
+.payment h3{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--gray);
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+.payment a{
+    color: #DD4E00;
+}
+
+.payment .btn{
+    background-color: var(--orange);
+}
+
+.payment-icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment h2{
+    margin: 24px 0;
+}
+.payment .btn{
+    display: flex;
+    gap: 20px;
+    padding: 16px 20px
+}
+
+.payment span{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+
+
+@media (max-width: 480px) {
+  html{
+    font-size: 16px;
+  }
+
+  h1{
+    font-size: 1.75rem;
+  }
+
+    .container{
+        padding: 0;
+    }
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  .nav-mobile a{
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .breadcrumb-container{
+    display: none;
+  }
+
+  .main-article{
+    flex-direction: column;
+  }
+
+  .cupid-section{
+    max-width: 100%;
+  }
+  .cupid{
+    height: 100vh;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+   border: none;
+   background: linear-gradient(to top, #ffffff 50%, #ffffff00 80%),
+   url(./img/cupid.png) top/100% 61% no-repeat;
+ position: relative;
+  }
+  .cupid .card-body{
+    display: flex;
+    padding: 0;
+  } 
+  .popular-label{
+    top: 6px;
+    left: 6px;
+    right: auto;
+  }
+
+  .card-inner{
+    height: 50%;
+    align-self: flex-end;
+  }
+  .card-inner, .tags, .description{
+    width: 100%;
+    text-align: center;
+  }
+
+  .tags{
+    font-size: 14px;
+    justify-content: center;
+    width: 80%;
+    margin: 18px  auto;
+  }
+  .description{
+    font-size: 1rem;
+  }
+
+/* reviews */
+.reviews{
+  padding: 24px 13px 0 13px;
+}
+.reviews-heading{
+  display: none;
+}
+.reviews-heading_mobile{
+  display: block;
+  padding: 24px 30px 0;
+}
+.reviews-heading_mobile h2{
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.reviews-heading_mobile p{
+  font-size: 0.81rem;
+}
+.reviews-button.btn{
+  color: #ffffff;
+  width: 100%;
+  font-size: 1rem;
+}
+
+  .payment-inner{
+    display: none;
+  }
+  .payment .btn{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+}
